@@ -1,0 +1,52 @@
+<div class="main-session" id="session-parent">
+  <div class="body">
+    <div class="login">
+      <div class="container">
+        <img src="./assets/images/user.png" width="35%" />
+        <form [formGroup]="loginForm" (ngSubmit)="logear()">
+          <!-- MAT-FORM-FIELD USUARIO -->
+          <mat-form-field appearance="outline" class="ancho">
+            <mat-label>Usuario</mat-label>
+            <input matInput
+              formControlName="user"
+              placeholder="Ingresa tu usuario"
+              autocomplete="off"/>
+            <mat-icon matPrefix class="material-icons" color="gray"> account_circle </mat-icon>
+
+            <mat-error *ngIf="loginForm.get('user')?.invalid">
+              *Campo requerido
+            </mat-error>
+          </mat-form-field>
+
+          <!-- MAT-FORM-FIELD CONTRASEÑA -->
+          <mat-form-field appearance="outline" class="ancho">
+            <mat-label> Contraseña </mat-label>
+            <input matInput
+              formControlName="password"
+              placeholder="Ingresa tu contraseña"
+              [type]="hidePassword ? 'password' : 'text'"
+              autocomplete="off"/>
+            <mat-icon matPrefix class="material-icons" color="gray"> lock </mat-icon>
+            <button matSuffix mat-icon-button class="pass-btn" (mousedown)="hidePassword = !hidePassword">
+              <mat-icon matSuffix class="material-icons-outlined" color="gray">
+                {{ changeHideBtn() }}
+              </mat-icon>
+            </button>
+
+            <mat-error *ngIf="loginForm.get('password')?.invalid">
+              *Campo requerido
+            </mat-error>
+          </mat-form-field>
+
+          <!-- BOTON INICIAR SESION -->
+          <button type="submit" mat-raised-button color="primary" class="ancho">
+            <span>Iniciar sesión</span>
+          </button>
+          <div class="link">
+            ¿Olvidaste tu contraseña?
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

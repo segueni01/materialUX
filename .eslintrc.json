@@ -1,0 +1,76 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*",
+    "*/**/*.spect.ts",
+    "src/environments/*.ts",
+    "main.ts",
+    "polyfills.ts",
+    "test.ts"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "tsconfig.json",
+          "e2e/tsconfig.json"
+        ],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "plugin:@angular-eslint/recommended",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
+      "rules": {
+        "@angular-eslint/component-class-suffix": [
+          "error",
+          {
+            "suffixes": ["Page", "Component"]
+          }
+        ],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ],
+        "@angular-eslint/use-lifecycle-interface": [
+          "error"
+        ],
+        "no-else-return": ["error", {"allowElseIf": false}],
+        "no-dupe-else-if": "error",
+        "no-console": "error",
+        "max-classes-per-file": ["error", 1],
+        "no-empty": ["error", { "allowEmptyCatch": true }],
+        "camelcase": ["error", {"ignoreDestructuring": true,"ignoreImports": true}],
+        "max-len": ["error", { "code":125 }],
+        "max-lines-per-function": ["error", {"max": 70, "skipBlankLines": true}]
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
+      "rules": {}
+    }
+  ]
+}

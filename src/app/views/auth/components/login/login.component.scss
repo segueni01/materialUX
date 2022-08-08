@@ -1,0 +1,42 @@
+@import "colors";
+@import "mixin";
+
+.login-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+.logincarrusel {
+  width: 100%;
+}
+.logincarrusel {
+  .mat-tab-header {
+    display: none;
+  }
+}
+
+.login{
+  padding: 0px;
+  border-radius: 20px;
+  border: 10px;
+  box-shadow: 5px 8px 8px rgb(223, 222, 222);
+}
+
+@media screen and (max-width: 950px) {
+  .logincarrusel{
+  display:none;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .login-style{
+  height: 600px;
+  }
+}
+
+
+
+

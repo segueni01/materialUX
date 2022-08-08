@@ -1,0 +1,9 @@
+@mixin font-nunitosans {
+  font-family: "NunitoSans-Regular", "NunitoSans-Bold", "NunitoSans-SemiBold" !important;
+  font: "NunitoSans-Regular", "NunitoSans-Bold", "NunitoSans-SemiBold"!important;
+}
+
+@mixin font-bold {
+  font: "NunitoSans-Bold";
+  font-family: "NunitoSans-Bold";
+}

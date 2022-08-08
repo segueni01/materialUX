@@ -1,0 +1,67 @@
+.mat-form-field input::-webkit-input-placeholder {
+  color: #d2d2d2;
+}
+
+.mat-form-field input:-moz-placeholder {
+  /* Firefox 18- */
+  color: #d2d2d2;
+}
+
+.mat-form-field input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #d2d2d2;
+}
+
+.mat-form-field input:-ms-input-placeholder {
+  color: #d2d2d2;
+}
+
+.mat-form-field-should-float .mat-form-field-label {
+  color: #35383a;
+}
+.mat-select .mat-select-min-line {
+  color: #696969 !important;
+}
+.mat-form-field input {
+  color: #696969 !important;
+}
+.mat-form-field textarea {
+  color: #696969 !important;
+}
+
+.mat-form-field textarea::-webkit-input-placeholder {
+  color: #d2d2d2;
+}
+
+.mat-form-field textarea:-moz-placeholder {
+  /* Firefox 18- */
+  color: #d2d2d2;
+}
+
+.mat-form-field textarea::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #d2d2d2;
+}
+
+.mat-form-field textarea:-ms-input-placeholder {
+  color: #d2d2d2;
+}
+
+.mat-select mat-option {
+  background: white;
+}
+//sombra gris removida de los mat option seleccionados
+.mat-active {
+  background: white !important;
+}
+//tabs
+.mat-tab-label-active {
+  opacity: 1 !important;
+}
+
+.npages-paginator {
+  float: left;
+  font-size: 14px;
+  line-height: 35px;
+  padding-left: 5px;
+}
